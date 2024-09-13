@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
-import { RainbowKitProvider, darkTheme, getDefaultConfig } from '@rainbow-me/rainbowkit';
+import { RainbowKitProvider, darkTheme,cssStringFromTheme,
+  lightTheme, getDefaultConfig } from '@rainbow-me/rainbowkit';
 import { WagmiProvider, http } from 'wagmi';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
@@ -66,13 +67,23 @@ root.render(
     <BrowserRouter>
       <WagmiProvider config={config}>
         <QueryClientProvider client={queryClient}>
-          <RainbowKitProvider theme={darkTheme({
-            accentColor: 'black',
-            accentColorForeground: 'white',
-            borderRadius: 'none',
-            fontStack: 'system',
-            overlayBlur: 'none',
-          })}>
+          <RainbowKitProvider theme={null}>
+            {" "}
+            <style
+              dangerouslySetInnerHTML={{
+                __html: `
+            :root {
+              ${cssStringFromTheme(darkTheme)}
+            }
+
+            html[data-dark] {
+              ${cssStringFromTheme(darkTheme, {
+                extends: lightTheme,
+              })}
+            }
+          `,
+              }}
+            />
             <App />
           </RainbowKitProvider>
         </QueryClientProvider>

@@ -2230,3 +2230,12 @@ body {
   max-width: -moz-fit-content;
   max-width: fit-content;
 }
+/* airdrop classes bg */
+@layer utilities {
+  .bg-light-image {
+    background-image: url('./assets/airdroplight.svg');
+  }
+  .dark .bg-dark-image {
+    background-image: url('./assets/airdropdark.svg');
+  }
+}

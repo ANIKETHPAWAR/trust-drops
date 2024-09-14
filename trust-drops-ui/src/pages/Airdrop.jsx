@@ -9,7 +9,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { useSignMessage, useAccount } from "wagmi";
 import { ethers } from "ethers";
-import airdroplight from '../assets/airdrop-light.svg';
+import airdroplight from '../assets/airdroplight.svg';
 import useTheme from "../context/theme";
 function Airdrop() {
   const [twitterAuthCode, setTwitterAuthCode] = useState(null);
@@ -156,33 +156,33 @@ function Airdrop() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: [0.6, -0.05, 0.01, 0.99] }}
     >
-      <div className=" flex  justify-center  dark:bg-black   dark:text-white bg-white font-mono">
+      <div className=" flex  justify-center bg-light-image bg-cover bg-center dark:bg-dark-image dark:text-white dark:bg-black font-mono">
       
         <div className="left-contianer md:w-[60%] max-md:w-[95%] pl-[5%] flex flex-col gap-6  mt-10">
           <div className="topLeftContainer ">
             <div className="small-text md:text-[16px] text-[12px] dark:text-slate-400 text-slate-900">
               YOU'RE ALMOST THERE
             </div>
-            <div className="Large-text md:text-[32px] text-[18px] text-[#7071E8]">
-              Claim your airdrop to participate in credibility staking:
+            <div className="Large-text md:text-[32px] text-[18px] dark:text-white text-black" >
+              To claim your airdrop:
             </div>
           </div>
           <div
-            className="bottomContainer dark:bg-airdrop-gradient-dark
+            className="bottomContainer bg-gray-600/30
           bg-airdrop-gradient-white px-8 py-8 flex flex-col "
           >
             <div className="flex justify-between  ">
               <div className="flex gap-2 items-center">
-                <div className="sno px-3 py-1 text-[16px]  dark:text-white bg-white text-black dark:bg-black rounded-full">
+                <div className="sno px-3 py-1 text-[16px]  text-white bg-black rounded-full">
                   1
                 </div>
-                <div className="text-container text-black max-md:hidden">
+                <div className="text-container text-white max-md:hidden">
                   Connect with twitter/X
                 </div>
               </div>
               <button
-                className="flex justify-center items-center button-container dark:bg-black
-                bg-white px-4 self-center py-2 text-center w-[200px] max-md:w-full"
+                className="flex justify-center items-center button-container bg-black
+                text-white px-4 self-center py-2 text-center w-[200px] max-md:w-full"
                 disabled={
                   (twitterAuthCode && twitterAuthCode.length > 0) ||
                   (user && user.approved)
@@ -194,36 +194,36 @@ function Airdrop() {
                   : "Connect twitter"}
               </button>
             </div>
-            <hr className="w-[90%] flex self-center  my-[10px] h-[0.5px] bg-black border-[0px]" />
+            <hr className="w-[90%] flex self-center  my-[10px] h-[0.5px]  border-[0px]" />
             <div className="flex justify-between">
               <div className="flex gap-2 items-center">
-                <div className="sno px-3 py-1 text-[16px]  dark:text-white bg-white text-black dark:bg-black  rounded-full">
+                <div className="sno px-3 py-1 text-[16px]  text-white  bg-black  rounded-full">
                   2
                 </div>
-                <div className="text-container text-black max-md:hidden">
+                <div className="text-container  max-md:hidden text-white ">
                   Connect your wallet
                 </div>
               </div>
               <div
-                className="flex justify-center items-center dark:bg-black
-                bg-white font-mono w-[200px] hover:duraion-0"
+                className="flex justify-center items-center bg-black
+                text-white font-mono w-[200px] hover:duraion-0"
               >
                 <ConnectButton showBalance={false} />
               </div>
             </div>
-            <hr className="w-[90%] flex self-center  my-[10px] h-[0.5px] bg-black border-[0px]" />
+            <hr className="w-[90%] flex self-center  my-[10px] h-[0.5px]  border-[0px]" />
             <div className="flex justify-between">
               <div className="flex gap-2 items-center">
-                <div className="sno px-3 py-1 text-[16px]  dark:text-white bg-white text-black dark:bg-black  rounded-full">
+                <div className="sno px-3 py-1 text-[16px]  text-white  bg-black  rounded-full">
                   3
                 </div>
-                <div className="text-container text-black max-md:hidden">
+                <div className="text-container  max-md:hidden text-white ">
                   Link your wallet with twitter/X
                 </div>
               </div>
               <button
-                className="flex justify-center items-center button-container dark:bg-black
-                bg-white px-4 self-center py-2 text-center w-[200px] max-md:w-full"
+                className="flex justify-center items-center button-container bg-black
+                text-white px-4 self-center py-2 text-center w-[200px] max-md:w-full"
                 disabled={linkLoading || (user && user.approved)}
                 onClick={initLinkWalletX}
               >
@@ -245,10 +245,7 @@ function Airdrop() {
             members to stake on you.
           </span>
         </div>
-        <div className="right-container  w-[40%]  h-full ">
-        {themeMode !== null && themeMode === "dark" ? (
-          <img src={AirdropImg} className="object-cover h-full"></img>):(<img src={airdroplight} className="object-cover  h-full"></img> )
-         } </div>
+       
       </div>
       <ToastContainer
         position="bottom-right"

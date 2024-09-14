@@ -156,7 +156,7 @@ function Airdrop() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: [0.6, -0.05, 0.01, 0.99] }}
     >
-      <div className=" flex  justify-center bg-light-image bg-cover bg-center dark:bg-dark-image dark:text-white dark:bg-black font-mono">
+      <div className=" flex  justify-center bg-light-image bg-cover min-h-screen bg-center dark:bg-dark-image dark:text-white dark:bg-black font-mono">
       
         <div className="left-contianer md:w-[60%] max-md:w-[95%] pl-[5%] flex flex-col gap-6  mt-10">
           <div className="topLeftContainer ">
@@ -235,7 +235,7 @@ function Airdrop() {
           <span>
             Tip: Join our{" "}
             <a
-              class="text-[#7071E8]"
+              class="dark:text-black text-white"
               href="https://discord.gg/9Ugch3fRC2"
               target="blank"
             >

@@ -565,7 +565,7 @@ function Dashboard({ value }) {
                           </div>
                         </div>
                         <button
-                          className="flex justify-center items-center w-[50%] claim-btn text-lg dark:text-white bg-claim-btn-gradient px-2 border-[2px] border-[#7071E8] text-black "
+                          className="flex justify-center items-center w-[50%] claim-btn text-lg text-white bg-claim-btn-gradient px-2 border-[2px] border-[#7071E8]  "
                           onClick={handleClaim}
                           disabled={claimTxConfirming || claimTxPending}
                         >

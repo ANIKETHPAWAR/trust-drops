@@ -152,7 +152,7 @@ function LeaderBoard() {
             onClick={() => goToPage(i)}
             className={`p-2 ${
               currentPage === i
-                ? "text-[#7071E8] bg-white"
+                ? "text-[#7071E8] bg-white dark:bg-black"
                 : "text-gray-600 bg-white"
             }`}
           >
@@ -287,7 +287,7 @@ function LeaderBoard() {
                 </div>
                 <div className="flex overflow-x-auto items-center md:justify-center xs:justify-between mt-4">
                   <button
-                    className=" p-2  text-base  text-black bg-[#7071E8]  hover:bg-[#7070e8d0]"
+                    className=" p-2  text-base   text-black bg-[#7071E8]  hover:bg-[#7070e8d0]"
                     onClick={() => goToPage(currentPage - 1)}
                     disabled={currentPage === 1}
                   >

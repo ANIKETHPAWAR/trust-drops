@@ -155,7 +155,7 @@ function Airdrop() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: [0.6, -0.05, 0.01, 0.99] }}
     >
-      <div className=" flex  justify-center  bg-cover min-h-screen w-full my-0 bg-center bg-light-image dark:bg-dark-image dark:text-white dark:bg-black font-mono">
+      <div className=" flex  justify-center  bg-cover min-h-screen w-full my-0 bg-center bg-light-image dark:bg-dark-image dark:text-white dark:bg-black font-mono all duration-0	h-auto">
       
         <div className="left-contianer md:w-[60%] max-md:w-[95%] pl-[5%] flex flex-col gap-6  mt-10">
           <div className="topLeftContainer ">

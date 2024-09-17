@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import AirdropImg from "../assets/airdropImage.svg";
-
 import { useLocation, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import ClipLoader from "react-spinners/ClipLoader";

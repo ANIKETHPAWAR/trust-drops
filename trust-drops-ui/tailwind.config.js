@@ -9,6 +9,8 @@ module.exports = {
         'hero-button-stroke':
           'linear-gradient(98deg, #000 9.17%, rgba(112, 113, 232, 0.02) 120.09%)',
         'credibility-staking-rewards-gradient':
+          'linear-gradient(145deg, #fff -11.19%, #7071E8 114.37%)',
+          'credibility-staking-rewards-gradient-dark':
           'linear-gradient(145deg, #000 -11.19%, #7071E8 114.37%)',
         'credibility-staking-livefeed':
           'linear-gradient(90deg, #7071E8 0%, rgba(63, 63, 130, 0.30) 100%)',

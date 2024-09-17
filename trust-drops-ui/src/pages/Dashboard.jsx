@@ -498,7 +498,7 @@ function Dashboard({ value }) {
             </div>
             <div className="main-container-cr md:w-[60%] max-h-full flex flex-col gap-4 ">
               <div
-                className="claim-rewards-container dark:bg-credibility-staking-rewards-gradient-dark bg-credibility-staking-rewards-gradient-white
+                className="claim-rewards-container dark:bg-credibility-staking-rewards-gradient-dark bg-credibility-staking-rewards-gradient
                px-4 py-2 flex flex-col  gap-4 h-full"
               >
                 <div className="top-data-container flex flex-col gap-2">

@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import { RainbowKitProvider, darkTheme,cssStringFromTheme,
-  lightTheme, getDefaultConfig } from '@rainbow-me/rainbowkit';
+  lightTheme, getDefaultConfig,midnightTheme} from '@rainbow-me/rainbowkit';
 import { WagmiProvider, http } from 'wagmi';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
@@ -67,7 +67,7 @@ root.render(
     <BrowserRouter>
       <WagmiProvider config={config}>
         <QueryClientProvider client={queryClient}>
-          <RainbowKitProvider theme={null}>
+          <RainbowKitProvider theme={midnightTheme()}>
             {" "}
             <style
               dangerouslySetInnerHTML={{
